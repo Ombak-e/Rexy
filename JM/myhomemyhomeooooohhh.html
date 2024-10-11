@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Caviar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f97904;
+        }
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 27px;
+        }
+
+        .logo span {
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: none;
+        }
+
+        .menu-icon .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f4f4f4;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .banner-text h2 {
+            font-size: 40px;
+            color: #f5f5f5;
+        }
+
+        .banner-text h1 {
+            font-size: 70px;
+            font-weight: bold;
+            color: #f5f5f5;
+        }
+
+        .ice-cream-img {
+            position: absolute;
+            bottom: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: auto; 
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px 5%;
+            text-align: left;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .wrapper {
+            padding: 40px 5%;
+            border-radius: 8px;
+        }
+
+        .caviar-section {
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 40px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .caviar-section video {
+            width: 500px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+
+        .caviar-section h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #8402b8;
+        }
+
+        .caviar-section p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .banner-text h1 {
+                font-size: 60px;
+            }
+
+            .banner-text h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .banner-text {
+                top: 20%; 
+            }
+            .content h2 {
+                font-size: 20px;
+            }
+            .content h1 {
+                font-size: 21px;
+            }
+            .ice-cream-img {
+                width: 35vw; 
+                bottom: -10%; 
+            }
+        }
+
+        @media (max-width: 800px) {
+            .caviar-section {
+                flex-direction: column; 
+                align-items: center;    
+                text-align: center;    
+            }
+
+            .caviar-section video {
+                width: 90%;             
+                margin-bottom: 10px;    
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 48px;
+            }
+
+            .banner-text h2 {
+                font-size: 28px;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .navbar {
+                justify-content: space-between;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .wrapper {
+                padding: 20px;
+            }
+
+            .caviar-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .caviar-section video {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 525px) {
+            .banner-text h1 {
+                font-size: 36px;
+            }
+
+            .banner-text h2 {
+                font-size: 20px;
+            }
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            .ice-cream-img {
+                width: 50vw; 
+                bottom: -10%; 
+            }
+
+            .content h2 {
+                font-size: 21px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .wrapper {
+                padding: 15px;
+            }
+
+            .caviar-section {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <img src="images/bgm.jpg" alt="Caviar Image">
+        <div class="banner-text">
+            <h2>What is an </h2>
+            <h1>ICE CREAM</h1>
+        </div>
+        <img class="ice-cream-img" src="images/bg-removebg-preview.png" alt="Ice Cream Image"> 
+    </section>
+
+    <div class="wrapper">
+        <section class="content">
+            <h2>What is an Ice Cream</h2>
+            <p>Ice cream is a mixture of milk, cream, sugar, and sometimes other ingredients, frozen into a soft, creamy delight using special techniques. Ice cream has been a popular treat for hundreds of years but has only become commonplace since the widespread use of refrigeration. The exploding popularity of ice cream has led to several ice cream variations including frozen custard, frozen yogurt, and even non-dairy versions made with ingredients like coconut milk.</p>
+            
+            <h2>What Does Ice Cream Taste Like?</h2>
+            <p>Ice cream is sweet, and is usually flavored with fruit, spices, or candy- the flavor often influences the color (that is, chocolate ice cream is brown, strawberry and cherry flavors are pink, pistachio is green). Good ice cream has a smooth texture.</p>
+        </section>
+
+        <section class="caviar-section">
+            <video controls loop muted autoplay>
+                <source src="images/NINJA CREAMI Mango Sorbet.mp4" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+            <div>
+                <h3>Mango Sorbet</h3>
+                <p>Sorbet is a frozen dessert made using ice combined with fruit juice, fruit purée, or other ingredients, such as wine, liqueur, or honey. Generally, sorbets do not contain dairy products.</p>
+            </div>
+        </section>
+
+        <section class="caviar-section">
+            <video controls loop muted autoplay>
+                <source src="images/Ibaco Icecream Shakes.mp4" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+            <div>
+                <h3>Butter Pecan</h3>
+                <p>Butter pecan is a flavor, prominent especially in the United States, in ice cream, cakes, and cookies. Roasted pecans, butter, and vanilla flavor are used in butter pecan baked goods. Butter pecan ice cream is smooth vanilla ice cream with a slight buttery flavor, with pecans added.</p>
+            </div>
+        </section>
+
+        <section class="caviar-section">
+            <video controls loop muted autoplay>
+                <source src="images/Family Movie Time with Cookies and Cream and Coffee Crumble!.mp4" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+            <div>
+                <h3>Cookies and Cream</h3>
+                <p>Cookies and Cream Ice Cream is the perfect homemade ice cream that's made using four simple ingredients. It's rich, creamy, and absolutely delicious. Sure to be your favorite flavor to enjoy on a hot summer day.</p>
+            </div>
+        </section>
+        
+        <section class="caviar-section">
+            <video controls loop muted autoplay>
+                <source src="images/Elephant House Feelgood Frozen Yoghurt.mp4" type="video/mp4"> 
+            </video>
+            <div>
+                <h3>Frozen yogurt</h3>
+                <p>Frozen yogurt is a frozen dessert made with yogurt and sometimes other dairy and non-dairy products. Frozen yogurt is a frozen product containing the same basic ingredients as ice cream, but contains live bacterial cultures.</p>
+            </div>
+        </section>
+
+        <section class="caviar-section">
+            <video controls loop muted autoplay>
+                <source src="images/Movie time na with Selecta Rocky Road!.mp4" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+            <div>
+                <h3>Rocky road</h3>
+                <p>Rocky road ice cream is a chocolate-flavored ice cream. Though there are variations from the original flavor, it traditionally comprises chocolate ice cream, nuts, and whole or diced marshmallows.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

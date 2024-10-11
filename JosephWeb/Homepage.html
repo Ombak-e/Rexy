@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goofy Tails - Cat Breeds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(114, 114, 114, 0.1);
+        }
+
+        .logo-search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .search-box {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .search-box input {
+            width: 80%;
+            padding: 13px;
+            border: 1px solid #3266d8;
+            border-radius: 5px;
+            margin-left: 50px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons .icon {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+        .header-icons .icon img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;   
+            padding-top: 20px; 
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .breed-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f3ec;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 2px solid #cfcfcf; 
+        }
+
+        .breed-section img {
+            max-width: 50%;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .breed-info {
+            max-width: 50%;
+            padding: 20px;
+        }
+
+        .breed-info h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .breed-info p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .breed-info .features {
+            margin-top: 20px;
+        }
+
+        .view-more-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 11px 11px;
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 20px 0 20px 0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .view-more-btn:hover {
+            background-color: #e04b4b;
+        }
+
+        @media (max-width: 768px) {
+            .breed-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .breed-section img {
+                max-width: 80%;
+                margin: 0 auto 20px;
+            }
+
+            .breed-info {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-search">
+            <div class="logo">
+                <img src="icons/LOGO.png" alt="Goofy Tails Logo">
+                <span>SEPHTAILS</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="header-icons">
+                <a href="#" class="icon">
+                    <img src="icons/telephone.png" alt="Support"> SUPPORT
+                </a>
+                <a href="#" class="icon">
+                    <img src="icons/user.png" alt="Account"> ACCOUNT
+                </a>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="Homepage2.html">DOGS</a>
+            <a href="Homepage.html">CATS & KITTENS</a>            
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Cat Breeds</h1>
+        <p>This is the official list of all different types of  cat breeds.</p>
+    </div>
+
+    <section class="breed-section">
+        <img src="images/abyssinian-cat.jpg" alt="Abyssinian Cat Image">
+        <div class="breed-info">
+            <h2>Abyssinian Cat</h2>
+            <p><strong>Breed Name:</strong> Abyssinian Cat</p>
+            <p><strong>Origin:</strong> Ethiopia, South East Asia, Indian Ocean</p>
+            <p><strong>Abyssinian Cat History:</strong> An ancient cat breed with an inexplicable origin, the Abyssinian cat is probably linked with ancient Egypt. This breed was introduced in the late 1800s, gaining attention for its charming looks and distinctive coat. Abyssinians are famous for their jolly nature, medium size, and loving temperament, which make them a cherished and popular cat breed around the world.</p>
+
+            <div class="features">
+                <p><strong>Features:</strong></p>
+                <p><strong>Size:</strong> Adult males (4.5 to 7.3 Kg) and females (2.7 to 4.5 Kg)</p>
+                <p><strong>Height:</strong> 8 to 10 inches</p>
+            </div>
+
+            <a href="#" class="view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <section class="breed-section">
+        <img src="images/siamese.jpg" alt="Siamese Cat Image">
+        <div class="breed-info">
+            <h2>Siamese Cat</h2>
+            <p><strong>Breed Name:</strong> Siamese Cat</p>
+            <p><strong>Origin:</strong> Thailand</p>
+            <p><strong>Siamese Cat History:</strong> The Siamese cat is one of the first distinctly recognised breeds of Asian cat. The Siamese Cat derived from the Wichianmat landrace. They are one of several varieties of cats native to Thailand, the original Siamese became one of the most popular breeds in Europe and North America in the 19th century.</p>
+
+            <div class="features">
+                <p><strong>Features:</strong></p>
+                <p><strong>Size:</strong> Adult males (4 to 6 Kg) and females (2.5 to 4.5 Kg)</p>
+                <p><strong>Height:</strong> 27 to 31 centimeters</p>
+            </div>
+
+            <a href="#" class="view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <section class="breed-section">
+        <img src="images/british shorttail.png" alt="British Shorttail">
+        <div class="breed-info">
+            <h2>British Shorttail</h2>
+            <p><strong>Breed Name:</strong> British Shorttail Cat</p>
+            <p><strong>Origin:</strong> Thailand</p>
+            <p><strong>Another Cat Breed History:</strong> The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, thick coat, and broad face. The most familiar colour variant is the "British Blue", with a solid grey-blue coat, pineapple eyes, and a medium-sized tail.</p>
+
+            <div class="features">
+                <p><strong>Features:</strong></p>
+                <p><strong>Size:</strong> Adult males (4.1 to 7.7 Kg) and females (3.2 to 5.4 Kg)</p>
+                <p><strong>Height:</strong> 30 to 46 centimeters</p>
+            </div>
+
+            <a href="#" class="view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <section class="breed-section">
+        <img src="images/mainecoon cat.jpg" alt="Another Cat Breed Image">
+        <div class="breed-info">
+            <h2>Maine Coon Cat</h2>
+            <p><strong>Breed Name:</strong> Maine Coon Cat</p>
+            <p><strong>Origin:</strong> Maine, United States</p>
+            <p><strong>Another Cat Breed History:</strong> The Maine Coon is a large domesticated cat breed. One of the oldest natural breeds in North America, the breed originated in the U.S. state of Maine, where it is the official state cat.</p>
+
+            <div class="features">
+                <p><strong>Features:</strong></p>
+                <p><strong>Size:</strong> Adult males (4 to 6 Kg) and females (2.5 to 4.5 Kg)</p>
+                <p><strong>Height:</strong> 27 to 31 centimeters</p>
+            </div>
+
+            <a href="#" class="view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <section class="breed-section">
+        <img src="images/persian cat.jpg" alt="Perisan Cat">
+        <div class="breed-info">
+            <h2>Persian Cat</h2>
+            <p><strong>Breed Name:</strong> Persian Cat</p>
+            <p><strong>Origin:</strong> Iran</p>
+            <p><strong>Another Cat Breed History:</strong> The Persian cat, also known as the Persian Longhair, is a long-haired breed of cat characterised by a round face and short muzzle. The first documented ancestors of Persian cats might have been imported into Italy from Khorasan as early as around 1620.</p>
+
+            <div class="features">
+                <p><strong>Features:</strong></p>
+                <p><strong>Size:</strong> Adult males (2.4kg to 3.8kg) and females (3.3kg to 4.7kg)</p>
+                <p><strong>Height:</strong> 27 to 31 centimeters</p>
+            </div>
+
+            <a href="#" class="view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <section class="breed-section">
+        <img src="images/ragdoll cat.jpg" alt="Ragdoll Cat">
+        <div class="breed-info">
+            <h2>Ragdoll Cat</h2>
+            <p><strong>Breed Name:</strong> Ragdoll Cat</p>
+            <p><strong>Origin:</strong> Iran</p>
+            <p><strong>Another Cat Breed History:</strong> The Ragdoll is a breed of cat with a distinct colorpoint coat and blue eyes. Its morphology is large and weighty, and it has a semi-long and silky soft coat. American breeder Ann Baker developed Ragdolls in the 1960s. They are best known for their docile, placid temperament and affectionate nature.</p>
+
+            <div class="features">
+                <p><strong>Features:</strong></p>
+                <p><strong>Size:</strong> Adult males (5.4 to 9.1 kg) and females ( 3.6 to 6.8 kg)</p>
+                <p><strong>Height:</strong> 23 to 28 centimeters</p>
+            </div>
+
+            <a href="#" class="view-more-btn">View More</a>
+        </div>
+    </section>
+</body>
+</html>
+

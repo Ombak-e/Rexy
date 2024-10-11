@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goofy Tails - Dog Breeds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .breed-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f3ec;
+            border-radius: 10px;
+            border: 2px solid #cfcfcf; 
+        }
+
+        .breed-section img {
+            max-width: 50%;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .breed-info {
+            max-width: 50%;
+            padding: 20px;
+        }
+
+        .breed-info h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .summary-info, .detailed-info, .back-btn {
+            display: none;
+        }
+
+        .view-more-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 20px 0 20px 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .view-more-btn:hover {
+            background-color: #e04b4b;
+        }
+
+        /* Check for the view-more button being clicked */
+        input[type="checkbox"]:checked ~ .detailed-info {
+            display: block;
+        }
+
+        input[type="checkbox"]:checked ~ .summary-info {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .view-more-btn {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .back-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 20px 0 20px 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:not(:checked) ~ .summary-info {
+            display: block;
+        }
+
+        input[type="checkbox"]:not(:checked) ~ .detailed-info {
+            display: none;
+        }
+
+        input[type="checkbox"]:not(:checked) ~ .back-btn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .breed-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .breed-section img {
+                max-width: 80%;
+                margin: 0 auto 20px;
+            }
+
+            .breed-info {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Labrador Retriever Section -->
+    <section class="breed-section">
+        <img src="images/labrador.jpg" alt="Labrador Dog Image">
+        <div class="breed-info">
+            <h2>Labrador Retriever</h2>
+            <input type="checkbox" id="toggle-lab" style="display:none;">
+            <div class="summary-info">
+                <p><strong>Breed Name:</strong> Labrador Retriever</p>
+                <p><strong>Origin:</strong> Canada</p>
+                <p><strong>Overview:</strong> Labs are friendly, outgoing, and high-spirited companions who have more than enough affection to go around.</p>
+            </div>
+
+            <div class="detailed-info">
+                <p><strong>Size:</strong> 25-36 Kg</p>
+                <p><strong>Height:</strong> 21-24 inches</p>
+                <p><strong>History:</strong> Labrador Retrievers were bred to be both a friendly companion and a useful working dog breed, particularly for retrieving fish and game.</p>
+            </div>
+
+            <label for="toggle-lab" class="view-more-btn">View More</label>
+            <label for="toggle-lab" class="back-btn">Back</label>
+        </div>
+    </section>
+
+    <!-- German Shepherd Section -->
+    <section class="breed-section">
+        <img src="images/germanshepherd.jpg" alt="German Shepherd Dog Image">
+        <div class="breed-info">
+            <h2>German Shepherd</h2>
+            <input type="checkbox" id="toggle-gs" style="display:none;">
+            <div class="summary-info">
+                <p><strong>Breed Name:</strong> German Shepherd</p>
+                <p><strong>Origin:</strong> Germany</p>
+                <p><strong>Overview:</strong> German Shepherds are confident, courageous, and smart. They are strong and versatile working dogs.</p>
+            </div>
+
+            <div class="detailed-info">
+                <p><strong>Size:</strong> 30-40 Kg</p>
+                <p><strong>Height:</strong> 22-26 inches</p>
+                <p><strong>History:</strong> Originally bred for herding sheep, German Shepherds became one of the most popular working dogs due to their intelligence and versatility.</p>
+            </div>
+
+            <label for="toggle-gs" class="view-more-btn">View More</label>
+            <label for="toggle-gs" class="back-btn">Back</label>
+        </div>
+    </section>
+
+    <!-- Golden Retriever Section -->
+    <section class="breed-section">
+        <img src="images/goldenretriever.jpg" alt="Golden Retriever Dog Image">
+        <div class="breed-info">
+            <h2>Golden Retriever</h2>
+            <input type="checkbox" id="toggle-gr" style="display:none;">
+            <div class="summary-info">
+                <p><strong>Breed Name:</strong> Golden Retriever</p>
+                <p><strong>Origin:</strong> Scotland</p>
+                <p><strong>Overview:</strong> Known for their friendly, tolerant attitude, Golden Retrievers are great family pets.</p>
+            </div>
+
+            <div class="detailed-info">
+                <p><strong>Size:</strong> 25-34 Kg</p>
+                <p><strong>Height:</strong> 20-24 inches</p>
+                <p><strong>History:</strong> Golden Retrievers were originally bred for retrieving game, particularly waterfowl during hunting and shooting parties.</p>
+            </div>
+
+            <label for="toggle-gr" class="view-more-btn">View More</label>
+            <label for="toggle-gr" class="back-btn">Back</label>
+        </div>
+    </section>
+
+    <!-- Beagle Section -->
+    <section class="breed-section">
+        <img src="images/beagle.jpg" alt="Beagle Dog Image">
+        <div class="breed-info">
+            <h2>Beagle</h2>
+            <input type="checkbox" id="toggle-beagle" style="display:none;">
+            <div class="summary-info">
+                <p><strong>Breed Name:</strong> Beagle</p>
+                <p><strong>Origin:</strong> United Kingdom</p>
+                <p><strong>Overview:</strong> Beagles are curious, friendly, and great with families, known for their excellent tracking ability.</p>
+            </div>
+
+            <div class="detailed-info">
+                <p><strong>Size:</strong> 9-14 Kg</p>
+                <p><strong>Height:</strong> 13-15 inches</p>
+                <p><strong>History:</strong> Beagles were bred primarily for hunting hare, and their incredible sense of smell makes them great scent hounds.</p>
+            </div>
+
+            <label for="toggle-beagle" class="view-more-btn">View More</label>
+            <label for="toggle-beagle" class="back-btn">Back</label>
+        </div>
+    </section>
+
+    <!-- Poodle Section -->
+    <section class="breed-section">
+        <img src="images/poodle.jpg" alt="Poodle Dog Image">
+        <div class="breed-info">
+            <h2>Poodle</h2>
+            <input type="checkbox" id="toggle-poodle" style="display:none;">
+            <div class="summary-info">
+                <p><strong>Breed Name:</strong> Poodle</p>
+                <p><strong>Origin:</strong> Germany</p>
+                <p><strong>Overview:</strong> Poodles are intelligent, energetic, and have hypoallergenic coats, making them great pets for allergy sufferers.</p>
+            </div>
+
+            <div class="detailed-info">
+                <p><strong>Size:</strong> 20-30 Kg</p>
+                <p><strong>Height:</strong> 15-24 inches</p>
+                <p><strong>History:</strong> Originally bred as water retrievers, Poodles are known for their intelligence and versatility
+                    . Poodles can perform various tasks and are known for their agility and obedience.</p>
+                </div>
+    
+                <label for="toggle-poodle" class="view-more-btn">View More</label>
+                <label for="toggle-poodle" class="back-btn">Back</label>
+            </div>
+        </section>
+    
+        <!-- Bulldog Section -->
+        <section class="breed-section">
+            <img src="images/bulldog.jpg" alt="Bulldog Dog Image">
+            <div class="breed-info">
+                <h2>Bulldog</h2>
+                <input type="checkbox" id="toggle-bulldog" style="display:none;">
+                <div class="summary-info">
+                    <p><strong>Breed Name:</strong> Bulldog</p>
+                    <p><strong>Origin:</strong> England</p>
+                    <p><strong>Overview:</strong> Bulldogs are gentle, affectionate, and known for their loose, wrinkled skin and distinctive pushed-in nose.</p>
+                </div>
+    
+                <div class="detailed-info">
+                    <p><strong>Size:</strong> 23-25 Kg</p>
+                    <p><strong>Height:</strong> 14-15 inches</p>
+                    <p><strong>History:</strong> Bulldogs were originally bred for bull-baiting, but now they are beloved family pets known for their loyalty.</p>
+                </div>
+    
+                <label for="toggle-bulldog" class="view-more-btn">View More</label>
+                <label for="toggle-bulldog" class="back-btn">Back</label>
+            </div>
+        </section>
+    
+        <!-- Dachshund Section -->
+        <section class="breed-section">
+            <img src="images/dachshund.jpg" alt="Dachshund Dog Image">
+            <div class="breed-info">
+                <h2>Dachshund</h2>
+                <input type="checkbox" id="toggle-dachshund" style="display:none;">
+                <div class="summary-info">
+                    <p><strong>Breed Name:</strong> Dachshund</p>
+                    <p><strong>Origin:</strong> Germany</p>
+                    <p><strong>Overview:</strong> Dachshunds are playful, curious, and known for their long bodies and short legs, making them distinctive.</p>
+                </div>
+    
+                <div class="detailed-info">
+                    <p><strong>Size:</strong> 7-15 Kg</p>
+                    <p><strong>Height:</strong> 8-9 inches</p>
+                    <p><strong>History:</strong> Originally bred to hunt badgers, Dachshunds are now popular pets known for their unique appearance and playful nature.</p>
+                </div>
+    
+                <label for="toggle-dachshund" class="view-more-btn">View More</label>
+                <label for="toggle-dachshund" class="back-btn">Back</label>
+            </div>
+        </section>
+    
+        <!-- Rottweiler Section -->
+        <section class="breed-section">
+            <img src="images/rottweiler.jpg" alt="Rottweiler Dog Image">
+            <div class="breed-info">
+                <h2>Rottweiler</h2>
+                <input type="checkbox" id="toggle-rottweiler" style="display:none;">
+                <div class="summary-info">
+                    <p><strong>Breed Name:</strong> Rottweiler</p>
+                    <p><strong>Origin:</strong> Germany</p>
+                    <p><strong>Overview:</strong> Rottweilers are confident, fearless, and great companions, known for their loyalty and strength.</p>
+                </div>
+    
+                <div class="detailed-info">
+                    <p><strong>Size:</strong> 35-60 Kg</p>
+                    <p><strong>Height:</strong> 22-27 inches</p>
+                    <p><strong>History:</strong> Rottweilers were originally bred as herding and guarding dogs, and they excel in protection and obedience work.</p>
+                </div>
+    
+                <label for="toggle-rottweiler" class="view-more-btn">View More</label>
+                <label for="toggle-rottweiler" class="back-btn">Back</label>
+            </div>
+        </section>
+    
+        <!-- Boxer Section -->
+        <section class="breed-section">
+            <img src="images/boxer.jpg" alt="Boxer Dog Image">
+            <div class="breed-info">
+                <h2>Boxer</h2>
+                <input type="checkbox" id="toggle-boxer" style="display:none;">
+                <div class="summary-info">
+                    <p><strong>Breed Name:</strong> Boxer</p>
+                    <p><strong>Origin:</strong> Germany</p>
+                    <p><strong>Overview:</strong> Boxers are playful, energetic, and known for their strong build and boundless enthusiasm.</p>
+                </div>
+    
+                <div class="detailed-info">
+                    <p><strong>Size:</strong> 25-32 Kg</p>
+                    <p><strong>Height:</strong> 21-25 inches</p>
+                    <p><strong>History:</strong> Boxers were originally bred for hunting and guarding, and they make excellent family pets due to their affectionate nature.</p>
+                </div>
+    
+                <label for="toggle-boxer" class="view-more-btn">View More</label>
+                <label for="toggle-boxer" class="back-btn">Back</label>
+            </div>
+        </section>
+    
+    </body>
+    </html>
+    
